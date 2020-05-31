@@ -16,7 +16,7 @@ bs = 1
 model = avg_ensemble_3_resnet18(100)
 
 # Load the pretrained weights
-model_path = 'ensemble_network/models/best_model.pth'
+model_path = 'ensemble_network/model/best_model.pth'
 model.load_state_dict(torch.load(model_path)['net'])
 
 print(torch.load(model_path)['acc'])
@@ -25,7 +25,7 @@ model.cuda()
 model.eval()
 
 ## Step 2: Prepare dataset as usual
-DATAROOT = '/data/datasets/pytorch_datasets/CIFAR100'
+DATAROOT = '/data/CIFAR100'
 test_data = torchvision.datasets.CIFAR100(root=DATAROOT, train=False, download=True, transform=torchvision.transforms.ToTensor())
 testloader = torch.utils.data.DataLoader(
     test_data,
