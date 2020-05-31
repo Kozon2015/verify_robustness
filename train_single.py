@@ -1,5 +1,3 @@
-'''Train Fer2013 with PyTorch.'''
-# 10 crop for data enhancement
 from __future__ import print_function
 
 import torch
@@ -20,7 +18,7 @@ from datetime import datetime
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 
-parser = argparse.ArgumentParser(description='PyTorchCNN Training')
+parser = argparse.ArgumentParser(description='PyTorch CNN Training')
 parser.add_argument('--model', type=str, default='Resnet18', help='CNN architecture')
 parser.add_argument('--dataset', type=str, default='CIFAR100', help='CNN architecture')
 parser.add_argument('--bs', default=64, type=int, help='batch size')
