@@ -14,7 +14,7 @@ model.load_state_dict((torch.load(pretrained_model))['net'])
 transform_test = transforms.Compose([
     transforms.ToTensor(),
 ])
-DATAROOT = '/data/datasets/pytorch_datasets/CIFAR100'
+DATAROOT = '/data/CIFAR100'
 test_data = torchvision.datasets.CIFAR100(root=DATAROOT, train=False, download=True, transform=transform_test)
 testloader = torch.utils.data.DataLoader(
     test_data,
