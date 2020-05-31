@@ -90,7 +90,7 @@ print('==> Preparing data..')
 
 # setup data loader
 
-DATAROOT = '/data/datasets/pytorch_datasets/CIFAR100'
+DATAROOT = '/data/CIFAR100'
 
 transform_train = transforms.Compose([
     transforms.RandomCrop(32, padding=4),
