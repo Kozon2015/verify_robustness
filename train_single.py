@@ -58,7 +58,7 @@ transform_test = transforms.Compose([
 ])
 
 #train and test data
-DATAROOT = '/data/datasets/pytorch_datasets/CIFAR100'
+DATAROOT = '/data/CIFAR100'
 train_data = torchvision.datasets.CIFAR100(
     root=DATAROOT, train=True, download=False, transform=transform_train)
 test_data = torchvision.datasets.CIFAR100(
